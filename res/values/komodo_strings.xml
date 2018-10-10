@@ -47,4 +47,8 @@
     <!-- Lock desktop -->
     <string name="lock_desktop_title">Lock desktop</string>
     <string name="lock_desktop_summary">Prevent the homescreen from being modified</string>
+
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Show icon labels on desktop</string>
+    <string name="drawer_show_labels">Show icon labels in drawer</string>
 </resources>
