@@ -128,6 +128,8 @@ public final class Utilities {
      */
     public static final int EDGE_NAV_BAR = 1 << 8;
 
+    static final String KEY_SHOW_SEARCHBAR = "pref_show_searchbar";
+
     /**
      * Indicates if the device has a debug build. Should only be used to store additional info or
      * add extra logging and not for changing the app behavior.
@@ -142,6 +144,8 @@ public final class Utilities {
     // An intent extra to indicate the horizontal scroll of the wallpaper.
     public static final String EXTRA_WALLPAPER_OFFSET = "com.android.launcher3.WALLPAPER_OFFSET";
     public static final String EXTRA_WALLPAPER_FLAVOR = "com.android.launcher3.WALLPAPER_FLAVOR";
+
+    public static final String SEARCH_PACKAGE = "com.google.android.googlequicksearchbox";
 
     public static boolean IS_RUNNING_IN_TEST_HARNESS =
                     ActivityManager.isRunningInTestHarness();
@@ -692,6 +696,14 @@ public final class Utilities {
         public int getIntrinsicWidth() {
             return mSize;
         }
+    }
+
+    public static boolean showQSB(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        if (!LauncherAppState.getInstanceNoCreate().isSearchAppAvailable()) {
+            return false;
+        }
+        return prefs.getBoolean(KEY_SHOW_SEARCHBAR, true);
     }
 
     /**
