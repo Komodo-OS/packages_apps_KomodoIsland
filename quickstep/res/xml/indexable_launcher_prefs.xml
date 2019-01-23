@@ -36,4 +36,8 @@
         android:defaultValue="@bool/allow_swipe_down_clearall"
         android:persistent="true" />
 
+    <Preference
+        android:key="pref_trust_apps"
+        android:title="@string/trust_apps_manager_name" />
+
 </PreferenceScreen>
