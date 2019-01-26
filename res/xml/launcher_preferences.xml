@@ -63,10 +63,18 @@
         android:defaultValue="@bool/allow_swipe_down_clearall"
         android:persistent="true" />
 
+    <SwitchPreference
+        android:key="pref_lock_desktop"
+        android:title="@string/lock_desktop_title"
+        android:summary="@string/lock_desktop_summary"
+        android:defaultValue="false"
+        android:persistent="true" />
+
     <androidx.preference.PreferenceScreen
         android:key="pref_developer_options"
         android:persistent="false"
         android:title="Developer Options"
         android:fragment="com.android.launcher3.settings.DeveloperOptionsFragment"/>
 
+     
 </androidx.preference.PreferenceScreen>
