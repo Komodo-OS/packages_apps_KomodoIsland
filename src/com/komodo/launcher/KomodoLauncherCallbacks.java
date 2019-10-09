@@ -26,7 +26,7 @@ import androidx.core.graphics.ColorUtils;
 import com.android.launcher3.AppInfo;
 import com.android.launcher3.LauncherCallbacks;
 import com.android.launcher3.R;
-import com.android.launcher3.settings.SettingsActivity;
+import com.android.launcher3.settings.SettingsHomescreen;
 import com.android.launcher3.uioverrides.WallpaperColorInfo;
 import com.android.launcher3.uioverrides.WallpaperColorInfo.OnChangeListener;
 import com.android.launcher3.util.Themes;
@@ -200,7 +200,7 @@ public class KomodoLauncherCallbacks implements LauncherCallbacks,
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
-        if (SettingsActivity.MINUS_ONE_KEY.equals(key)) {
+        if (SettingsHomescreen.MINUS_ONE_KEY.equals(key)) {
             ClientOptions clientOptions = getClientOptions(prefs);
             if (clientOptions.options != mLauncherClient.mFlags) {
                 mLauncherClient.mFlags = clientOptions.options;
@@ -233,7 +233,7 @@ public class KomodoLauncherCallbacks implements LauncherCallbacks,
 
     private ClientOptions getClientOptions(SharedPreferences prefs) {
         boolean hasPackage = KomodoUtils.hasPackageInstalled(mLauncher, SEARCH_PACKAGE);
-        boolean isEnabled = prefs.getBoolean(SettingsActivity.MINUS_ONE_KEY, true);
+        boolean isEnabled = prefs.getBoolean(SettingsHomescreen.MINUS_ONE_KEY, true);
         int canUse = hasPackage && isEnabled ? 1 : 0;
         return new ClientOptions(canUse | 2 | 4 | 8);
     }
