@@ -1,6 +1,5 @@
 /*
  * Copyright (C) 2019 Paranoid Android
- *           (C) 2020 Komodo-os-rom
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,18 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.komodo.launcher;
+package com.komodo.launcher.search;
 
-import com.android.launcher3.Launcher;
-import com.android.launcher3.LauncherCallbacks;
+import android.content.Intent;
 
-public class KomodoIsland extends Launcher {
+import com.android.launcher3.ItemInfoWithIcon;
+import com.android.launcher3.util.ComponentKey;
 
-    public KomodoIsland() {
-        setLauncherCallbacks(new KomodoIslandCallbacks(this));
+public class AppItemInfoWithIcon extends ItemInfoWithIcon {
+
+    public Intent mIntent;
+
+    public AppItemInfoWithIcon(ComponentKey componentKey) {
+        mIntent = new Intent("android.intent.action.MAIN").addCategory("android.intent.category.LAUNCHER").setComponent(componentKey.componentName).addFlags(270532608);
+        user = componentKey.user;
     }
 
-    public LauncherCallbacks getLauncherCallbacks() {
-        return mLauncherCallbacks;
+    public Intent getIntent() {
+        return mIntent;
     }
 }
