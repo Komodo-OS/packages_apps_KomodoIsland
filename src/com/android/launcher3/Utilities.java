@@ -50,6 +50,7 @@ import android.os.Looper;
 import android.os.Message;
 import android.os.PowerManager;
 import android.os.TransactionTooLargeException;
+import android.widget.Toast;
 import android.provider.Settings;
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -75,6 +76,7 @@ import com.android.launcher3.util.IntArray;
 import com.android.launcher3.util.PackageManagerHelper;
 import com.android.launcher3.views.Transposable;
 import com.android.launcher3.widget.PendingAddShortcutInfo;
+import com.android.launcher3.R;
 
 import java.lang.reflect.Method;
 import java.util.Arrays;
@@ -679,7 +681,8 @@ public final class Utilities {
                     runnable -> handler.post(runnable),
                     authenticationCallback);
         } else {
-            successRunnable.run();
+            Toast.makeText(context, R.string.trust_apps_no_lock_error, Toast.LENGTH_LONG)
+                .show();
         }
     }
 }
