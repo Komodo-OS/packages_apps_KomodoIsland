@@ -36,9 +36,6 @@ import android.text.TextUtils;
 
 import androidx.annotation.NonNull;
 
-import com.komodo.launcher.KomodoLauncherCallbacks;
-import com.komodo.launcher.KomodoUtils;
-
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceFragment.OnPreferenceStartFragmentCallback;
@@ -73,8 +70,6 @@ public class SettingsActivity extends Activity
     private static final int DELAY_HIGHLIGHT_DURATION_MILLIS = 600;
     public static final String SAVE_HIGHLIGHTED_KEY = "android:preference_highlighted";
     public static final String KEY_TRUST_APPS = "pref_trust_apps";
-
-    public static final String MINUS_ONE_KEY = "pref_enable_minus_one";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -216,9 +211,6 @@ public class SettingsActivity extends Activity
                     // Show if plugins are enabled or flag UI is enabled.
                     return FeatureFlags.showFlagTogglerUi(getContext()) ||
                             PluginManagerWrapper.hasPlugins(getContext());
-                case MINUS_ONE_KEY:
-                    return KomodoUtils.hasPackageInstalled(getActivity(),
-                            KomodoLauncherCallbacks.SEARCH_PACKAGE);
                 case KEY_TRUST_APPS:
                     preference.setOnPreferenceClickListener(p -> {
                         Utilities.showLockScreen(getActivity(),
