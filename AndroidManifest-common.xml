@@ -183,6 +183,7 @@
             android:name="com.komodo.launcher.settings.KomodoSettingsActivity"
             android:label="@string/settings_button_text"
             android:theme="@style/HomeSettingsTheme"
+            android:parentActivityName="com.komodo.launcher.KomodoLauncher"
             android:autoRemoveFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.APPLICATION_PREFERENCES" />
