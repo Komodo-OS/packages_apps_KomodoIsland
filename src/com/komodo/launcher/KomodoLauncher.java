@@ -19,10 +19,10 @@ package com.komodo.launcher;
 import com.android.launcher3.Launcher;
 import com.android.launcher3.LauncherCallbacks;
 
-public class KomodoIsland extends Launcher {
+public class KomodoLauncher extends Launcher {
 
-    public KomodoIsland() {
-        setLauncherCallbacks(new KomodoIslandCallbacks(this));
+    public KomodoLauncher() {
+        setLauncherCallbacks(new KomodoLauncherCallbacks(this));
     }
 
     public LauncherCallbacks getLauncherCallbacks() {

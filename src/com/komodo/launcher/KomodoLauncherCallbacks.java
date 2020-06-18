@@ -47,11 +47,11 @@ import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-public class KomodoIslandCallbacks implements LauncherCallbacks,
+public class KomodoLauncherCallbacks implements LauncherCallbacks,
         SharedPreferences.OnSharedPreferenceChangeListener, OnChangeListener {
     public static final String SEARCH_PACKAGE = "com.google.android.googlequicksearchbox";
 
-    private final KomodoIsland mLauncher;
+    private final KomodoLauncher mLauncher;
 
     private OverlayCallbackImpl mOverlayCallbacks;
     private LauncherClient mLauncherClient;
@@ -64,7 +64,7 @@ public class KomodoIslandCallbacks implements LauncherCallbacks,
 
     private final Bundle mUiInformation = new Bundle();
 
-    public KomodoIslandCallbacks(KomodoIsland launcher) {
+    public KomodoLauncherCallbacks(KomodoLauncher launcher) {
         mLauncher = launcher;
     }
 

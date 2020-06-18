@@ -36,7 +36,7 @@ import android.text.TextUtils;
 
 import androidx.annotation.NonNull;
 
-import com.komodo.launcher.KomodoIslandCallbacks;
+import com.komodo.launcher.KomodoLauncherCallbacks;
 import com.komodo.launcher.KomodoUtils;
 
 import androidx.preference.Preference;
@@ -218,7 +218,7 @@ public class SettingsActivity extends Activity
                             PluginManagerWrapper.hasPlugins(getContext());
                 case MINUS_ONE_KEY:
                     return KomodoUtils.hasPackageInstalled(getActivity(),
-                            KomodoIslandCallbacks.SEARCH_PACKAGE);
+                            KomodoLauncherCallbacks.SEARCH_PACKAGE);
                 case KEY_TRUST_APPS:
                     preference.setOnPreferenceClickListener(p -> {
                         Utilities.showLockScreen(getActivity(),
