@@ -25,7 +25,7 @@ import android.content.Intent;
 import android.content.pm.LauncherActivityInfo;
 import android.os.Bundle;
 
-import com.komodo.launcher.KomodoIsland;
+import com.komodo.launcher.KomodoLauncher;
 import com.komodo.launcher.search.AppSearchProvider;
 
 import com.android.launcher3.compat.LauncherAppsCompat;
@@ -35,15 +35,15 @@ import java.lang.ref.WeakReference;
 
 public class LongClickReceiver extends BroadcastReceiver {
 
-    public static WeakReference<KomodoIsland> mWeakReference = new WeakReference(null);
+    public static WeakReference<KomodoLauncher> mWeakReference = new WeakReference(null);
 
-    public static void getWeakReference(KomodoIsland launcher) {
+    public static void getWeakReference(KomodoLauncher launcher) {
         mWeakReference = new WeakReference(launcher);
     }
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        KomodoIsland launcher = (KomodoIsland) mWeakReference.get();
+        KomodoLauncher launcher = (KomodoLauncher) mWeakReference.get();
         if (launcher != null) {
             ComponentKey searchUri = AppSearchProvider.uriToComponent(intent.getData(), context);
             LauncherActivityInfo resolveActivity = LauncherAppsCompat.getInstance(context)

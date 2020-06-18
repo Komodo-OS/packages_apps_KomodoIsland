@@ -40,8 +40,8 @@ import androidx.recyclerview.widget.GridLayoutManager.LayoutParams;
 import androidx.recyclerview.widget.GridLayoutManager.SpanSizeLookup;
 import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
-import com.komodo.launcher.KomodoIsland;
-import com.komodo.launcher.KomodoIslandCallbacks;
+import com.komodo.launcher.KomodoLauncher;
+import com.komodo.launcher.KomodoLauncherCallbacks;
 import com.komodo.launcher.qsb.AllAppsQsbContainer;
 import com.komodo.launcher.search.nano.SearchProto.Columns;
 import com.komodo.launcher.search.nano.SearchProto.AppIndex;
@@ -73,7 +73,7 @@ import java.util.List;
 public class ConfigurationBuilder {
 
     public boolean mHasAllAppsDivider;
-    public KomodoIsland mLauncher;
+    public KomodoLauncher mLauncher;
     public BubbleTextView mBubbleTextView;
     public final Bundle mBundle = new Bundle();
     public boolean mIsAllApps;
@@ -99,7 +99,7 @@ public class ConfigurationBuilder {
                 .putExtra("source_logo_offset", getCenter(gIcon, sourceBounds))
                 .putExtra("source_mic_offset", getCenter(micIcon, sourceBounds))
                 .putExtra("use_fade_animation", true)
-                .setPackage(KomodoIslandCallbacks.SEARCH_PACKAGE).addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY | Intent.FLAG_ACTIVITY_NEW_TASK);
+                .setPackage(KomodoLauncherCallbacks.SEARCH_PACKAGE).addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY | Intent.FLAG_ACTIVITY_NEW_TASK);
     }
 
     public void updateHotseatSearchDimens() {

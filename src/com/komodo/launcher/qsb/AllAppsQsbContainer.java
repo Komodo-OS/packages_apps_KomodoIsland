@@ -77,8 +77,8 @@ import com.android.launcher3.util.TransformingTouchDelegate;
 import com.android.quickstep.WindowTransformSwipeHandler;
 
 import com.komodo.launcher.KomodoUtils;
-import com.komodo.launcher.KomodoIsland;
-import com.komodo.launcher.KomodoIslandCallbacks;
+import com.komodo.launcher.KomodoLauncher;
+import com.komodo.launcher.KomodoLauncherCallbacks;
 import com.komodo.launcher.qsb.configs.ConfigurationBuilder;
 import com.komodo.launcher.search.SearchHandler;
 
@@ -91,7 +91,7 @@ public class AllAppsQsbContainer extends FrameLayout implements Insettable, OnCl
     public Bitmap mShadowBitmap;
     private Context mContext;
     private DefaultQsbContainer mDefaultQsb;
-    public KomodoIsland mLauncher;
+    public KomodoLauncher mLauncher;
     private TransformingTouchDelegate mDelegate;
     public View mSearchIcon;
 
@@ -123,7 +123,7 @@ public class AllAppsQsbContainer extends FrameLayout implements Insettable, OnCl
         mContext = context;
         mResult = 0;
         mAlpha = 0;
-        mLauncher = (KomodoIsland) Launcher.getLauncher(context);
+        mLauncher = (KomodoLauncher) Launcher.getLauncher(context);
         setOnClickListener(this);
         mIsMainColorDark = Themes.getAttrBoolean(mLauncher, R.attr.isMainColorDark);
         mMarginAdjusting = mContext.getResources().getDimensionPixelSize(R.dimen.qsb_margin_top_adjusting);
@@ -463,7 +463,7 @@ public class AllAppsQsbContainer extends FrameLayout implements Insettable, OnCl
     }
 
     protected void updateQsbType() {
-        boolean useDefaultQsb = !KomodoUtils.hasPackageInstalled(Launcher.getLauncher(mContext), KomodoIslandCallbacks.SEARCH_PACKAGE);
+        boolean useDefaultQsb = !KomodoUtils.hasPackageInstalled(Launcher.getLauncher(mContext), KomodoLauncherCallbacks.SEARCH_PACKAGE);
         if (useDefaultQsb != mUseDefaultQsb) {
             removeDefaultQsb();
             mUseDefaultQsb = useDefaultQsb;

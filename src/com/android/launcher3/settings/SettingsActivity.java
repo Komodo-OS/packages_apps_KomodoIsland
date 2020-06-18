@@ -37,7 +37,7 @@ import android.text.TextUtils;
 
 import androidx.annotation.NonNull;
 
-import com.komodo.launcher.KomodoIslandCallbacks;
+import com.komodo.launcher.KomodoLauncherCallbacks;
 import com.komodo.launcher.KomodoUtils;
 
 import androidx.preference.Preference;
@@ -249,7 +249,6 @@ public class SettingsActivity extends Activity
                             Utilities.IS_DEBUG_DEVICE &&
                             Utilities.existsStyleWallpapers(getContext());
             }
-
             return true;
         }
 

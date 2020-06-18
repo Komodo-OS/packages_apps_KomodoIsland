@@ -21,7 +21,7 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.view.View;
 
-import com.komodo.launcher.KomodoIsland;
+import com.komodo.launcher.KomodoLauncher;
 
 import com.android.launcher3.LauncherRootView.WindowStateListener;
 import com.android.launcher3.LauncherState;
@@ -32,10 +32,10 @@ public class QsbAnimationController implements WindowStateListener, StateListene
 
     public AnimatorSet mAnimatorSet;
     public boolean mQsbHasFocus;
-    public KomodoIsland mLauncher;
+    public KomodoLauncher mLauncher;
     public boolean mSearchRequested;
 
-    public QsbAnimationController(KomodoIsland launcher) {
+    public QsbAnimationController(KomodoLauncher launcher) {
         mLauncher = launcher;
         mLauncher.getStateManager().addStateListener(this);
         mLauncher.getRootView().setWindowStateListener(this);

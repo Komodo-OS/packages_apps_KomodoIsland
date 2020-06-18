@@ -43,7 +43,7 @@
         attributes and intent filters the same
         -->
         <activity
-            android:name="com.komodo.launcher.KomodoIsland"
+            android:name="com.komodo.launcher.KomodoLauncher"
             android:launchMode="singleTask"
             android:clearTaskOnLaunch="true"
             android:stateNotNeeded="true"
