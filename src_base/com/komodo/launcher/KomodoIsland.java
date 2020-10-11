@@ -16,7 +16,13 @@
 package com.komodo.launcher;
 
 import com.android.launcher3.Launcher;
+import com.android.systemui.plugins.shared.LauncherOverlayManager;
 
 public class KomodoIsland extends Launcher {
+
+    @Override
+    protected LauncherOverlayManager getDefaultOverlay() {
+        return new OverlayCallbackImpl(this);
+    }
 
 }
