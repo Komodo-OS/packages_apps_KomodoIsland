@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2019 Paranoid Android
+               (C) 2020 Komodo-os-rom
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Settings -->
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Tampilkan aplikasi Google</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Ketika Anda menggeser ke kanan dari layar utama</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Ketika Anda menggeser ke kiri dari layar utama</string>
+    <!-- QSB -->
+    <string name="label_search">Cari</string>
+    <string name="label_voice_search">Pencarian suara</string>
+    <!-- Edit workspace -->
+    <string name="settings_edit_allow_title">Izinkan edit/sunting</string>
+    <string name="settings_edit_allow_summary_on">Ikon dan Widget dapat ditambahkan, dihilangkan dan dipindahkan ke layar utama</string>
+    <string name="settings_edit_allow_summary_off">Ikon dan Widget tidak dapat ditambahkan, dihilangkan dan dipindahkan ke layar utama</string>
+    <string name="settings_edit_widgets_error">Tidak memungkinkan untuk menambah widget ke layar utama</string>
+    <!-- Swipe down to clear recents -->
+    <string name="allow_swipe_down_clearall_title">Hapus semua pada perintah geser ke bawah dari tampilan yang terbaru</string>
+    <string name="allow_swipe_down_clearall_desc">Tidak berfungsi jika tombol navigasi bar P diaktifkan</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Tersembunyi &amp; Aplikasi yang dilindungi</string>
+    <string name="trust_apps_manager_name_dialog">Aplikasi yang dilindungi</string>
+    <string name="trust_apps_auth_manager">Buka kunci untuk mengatur aplikasi yang disembunyikan dan dilindungi</string>
+    <string name="trust_apps_auth_open_app">Otentikasi untuk membuka %1$s</string>
+    <string name="trust_apps_loading">Memuat\u2026</string>
+    <string name="trust_apps_no_lock_error">Harap siapkan layar kunci aman untuk membatasi akses aplikasi</string>
+    <string name="trust_apps_help">Tolong</string>
+    <string name="trust_apps_info_hidden">Aplikasi tersembunyi dan widgetnya disembunyikan dari aplikasi drawer</string>
+    <string name="trust_apps_info_protected">Aplikasi yang dilindungi memerlukan otentikasi untuk dibuka dari peluncur (launcher)</string>
+    <!-- Lock desktop -->
+    <string name="lock_desktop_title">Kunci desktop</string>
+    <string name="lock_desktop_summary">Mencegah layar beranda dimodifikasi</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Tampilkan label ikon di desktop</string>
+    <string name="drawer_show_labels">Tampilkan label ikon di drawer</string>
+</resources>
